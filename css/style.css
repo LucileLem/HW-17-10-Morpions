@@ -7,7 +7,6 @@ body {
   background: url(../img/color.jpg) no-repeat center fixed;
   background-size: cover;
 }
-
 h1{
   position: absolute;
   top : 10px;
@@ -21,7 +20,6 @@ p {
   color : #c10237;
   font-size: 30px;
 }
-
 .jeu {
   width: 500px;
   height: 500px;
@@ -29,21 +27,17 @@ p {
   flex-direction: column;
   border : 5px solid #c10237;
 }
-
 .ended_game {
     text-align: center;
 }
-
 .ended_game_btn {
   display: flex;
   justify-content: center;
 }
-
 .row {
   flex : 1; /* Combinaison de 3 propriétés  */
   display: flex;
 }
-
 .cell {
   flex : 1; /* pr que ceci fonctionne, il faut que le parent ait un flex +
   Cela fait la somme des flex. Ici = 3, Donc il occupera 1/3 de la surface */
