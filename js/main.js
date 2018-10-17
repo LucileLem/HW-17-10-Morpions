@@ -15,10 +15,9 @@ cells.forEach(function(cell) {
 });
 
 var afficherSymbole = function(cell) {
-	// a remplir
-	// 1 - verifier case remplie ou pas
+	// Verifier si la case est remplie ou pas
 	if (!cell.innerHTML) {
-		// 2 - poser symbole J1 ou j2
+		// Poser symbole J1 ou j2
 		if (tourDuJoueur1) {
 			var cross = document.createElement("img");
 			cross.src = '../img/cross.png';
@@ -36,11 +35,11 @@ var afficherSymbole = function(cell) {
 	}
 };
 
-//hori / verti / diagonales
+//Combinaisons : hori / verti / diagonales
 var combinaisons = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 
 var verifierCombinaisons = function() {
-	// 3 - check combinaison gagnante
+	// Check combinaison gagnante
 	combinaisons.forEach(function(combinaison) {
 		if (cells[combinaison[0]].innerHTML === cells[combinaison[1]].innerHTML &&
 			cells[combinaison[1]].innerHTML === cells[combinaison[2]].innerHTML &&
@@ -53,11 +52,11 @@ var verifierCombinaisons = function() {
 			partieGagnee = true;
 		}
 	});
-	// 4 - changer le joueur courant
+	// Changer le joueur courant
 	tourDuJoueur1 = !tourDuJoueur1;
 };
 
-// pour rajouter un peu de durée de vie !
+// Recommencer
 function restartGame(){
 	partieGagnee = false;
 	cells.forEach(cell => cell.innerHTML = '');
