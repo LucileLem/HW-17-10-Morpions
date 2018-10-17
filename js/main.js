@@ -20,13 +20,13 @@ var afficherSymbole = function(cell) {
 		// Poser symbole J1 ou j2
 		if (tourDuJoueur1) {
 			var cross = document.createElement("img");
-			cross.src = '../img/cross.png';
+			cross.src = './img/cross.png';
 			cross.height = 164;
 			cross.width = 154;
 			cell.appendChild(cross);
 		} else {
 			var circle = document.createElement("img");
-			circle.src = '../img/circle.png';
+			circle.src = './img/circle.png';
 			circle.height = 164;
 			circle.width = 154;
 			cell.appendChild(circle);
